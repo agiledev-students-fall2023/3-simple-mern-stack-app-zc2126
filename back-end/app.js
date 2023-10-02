@@ -18,9 +18,10 @@ mongoose
   .then(data => console.log(`Connected to MongoDB`))
   .catch(err => console.error(`Failed to connect to MongoDB: ${err}`))
 
-// load the dataabase models we want to deal with
+// load the database models we want to deal with
 const { Message } = require('./models/Message')
 const { User } = require('./models/User')
+const { About } = require('./models/About')
 
 // a route to handle fetching all messages
 app.get('/messages', async (req, res) => {

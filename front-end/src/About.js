@@ -1,11 +1,39 @@
 import './About.css'
+import testing from './about.json'
+import axios from 'axios'
 
 /**
  * A React component that represents the Home page of the app.
  * @param {*} param0 an object holding any props passed to this component from its parent component
  * @returns The contents of this component, in JSX form.
  */
+
+/*async function loadInfo() {
+  const response = await fetch(`${process.env.REACT_APP_SERVER_HOSTNAME}/about.json`)
+  const info = await response.json()
+  console.log(info)
+  return info
+}*/
+
 const About = props => {
+  //const info = loadInfo()
+  const info = testing
+  console.log(info)
+
+  // this component expects to be passed all the details of the message it should display
+  return (
+    <>
+      <h1>Hi there</h1>
+      <img src = {`${info.pic}`}></img>
+
+      <p>{`${info.text}`}</p>
+    </>
+  )
+}
+
+/*
+const About = props => {
+
   return (
     <>
       <img src="./photo.png"></img>
@@ -22,6 +50,6 @@ const About = props => {
     </>
   )
 }
-
+*/
 // make this component available to be imported into any other file
 export default About

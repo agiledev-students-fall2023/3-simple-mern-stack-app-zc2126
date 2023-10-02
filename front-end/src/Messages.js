@@ -38,6 +38,8 @@ const Messages = props => {
       })
   }
 
+
+
   /**
    * A nested function used to add a new message to the list of messages
    * @param {*} message The new message to add to the list
@@ -64,6 +66,9 @@ const Messages = props => {
     }
   }, []) // putting a blank array as second argument will cause this function to run only once when component first loads
 
+
+
+  
   return (
     <>
       <h1>Leave a message!</h1>
