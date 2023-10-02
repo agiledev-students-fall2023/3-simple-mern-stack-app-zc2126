@@ -1,6 +1,5 @@
 import './About.css'
 import testing from './about.json'
-import axios from 'axios'
 
 /**
  * A React component that represents the Home page of the app.
@@ -19,6 +18,7 @@ const About = props => {
   //const info = loadInfo()
   const info = testing
   console.log(info)
+  console.log(info.pic)
 
   // this component expects to be passed all the details of the message it should display
   return (
