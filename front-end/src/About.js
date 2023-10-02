@@ -1,11 +1,19 @@
 import './About.css'
+import axios from 'axios'
+import data from './back-end/about.json'
 
 /**
  * A React component that represents the Home page of the app.
  * @param {*} param0 an object holding any props passed to this component from its parent component
  * @returns The contents of this component, in JSX form.
  */
+
 const About = props => {
+  const text = data.text
+  const pic = data.image
+
+  console.log(text)
+
   return (
     <>
       <img src="./photo.png"></img>
